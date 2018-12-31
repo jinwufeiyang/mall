@@ -104,13 +104,13 @@ public class OmsCartItem implements Serializable {
      */
     private Integer deleteStatus;
 
+
     /**
      * 商品分类
      *
      * @mbggenerated
      */
     private Long productCategoryId;
-
     private String productBrand;
 
     private String productSn;
