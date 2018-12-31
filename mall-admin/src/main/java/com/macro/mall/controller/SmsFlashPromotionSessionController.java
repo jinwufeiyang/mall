@@ -6,6 +6,8 @@ import com.macro.mall.model.SmsFlashPromotionSession;
 import com.macro.mall.service.SmsFlashPromotionSessionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -15,11 +17,14 @@ import java.util.List;
 /**
  * 限时购场次管理Controller
  * Created by macro on 2018/11/16.
+ * read 2018-12-30
  */
 @Controller
 @Api(tags = "SmsFlashPromotionSessionController", description = "限时购场次管理")
 @RequestMapping("/flashSession")
 public class SmsFlashPromotionSessionController {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private SmsFlashPromotionSessionService flashPromotionSessionService;
     @ApiOperation("添加场次")
@@ -37,6 +42,8 @@ public class SmsFlashPromotionSessionController {
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
     public Object update(@PathVariable Long id, @RequestBody SmsFlashPromotionSession promotionSession) {
+        logger.info("----> " + promotionSession.getStartTime());
+        logger.info("---" + promotionSession.toString());
         int count = flashPromotionSessionService.update(id,promotionSession);
         if(count>0){
             return new CommonResult().success(count);

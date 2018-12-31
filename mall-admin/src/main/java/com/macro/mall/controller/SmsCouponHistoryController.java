@@ -17,6 +17,7 @@ import java.util.List;
 /**
  * 优惠券领取记录管理Controller
  * Created by macro on 2018/11/6.
+ * read 2018-12-30
  */
 @Controller
 @Api(tags = "SmsCouponHistoryController",description = "优惠券领取记录管理")

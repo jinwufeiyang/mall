@@ -112,4 +112,5 @@ public class SmsFlashPromotionSession implements Serializable {
         sb.append("]");
         return sb.toString();
     }
+
 }

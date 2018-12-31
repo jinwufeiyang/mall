@@ -15,6 +15,7 @@ import java.util.List;
 /**
  * 限时购和商品关系管理Controller
  * Created by macro on 2018/11/16.
+ * read 2018-12-30
  */
 @Controller
 @Api(tags = "SmsFlashPromotionProductRelationController", description = "限时购和商品关系管理")

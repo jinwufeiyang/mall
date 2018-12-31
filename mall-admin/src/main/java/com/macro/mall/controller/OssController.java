@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Oss相关操作接口
  * Created by macro on 2018/4/26.
+ * read
  */
 @Controller
 @Api(tags = "OssController",description = "Oss管理")

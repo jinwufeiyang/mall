@@ -17,6 +17,7 @@ import java.util.List;
 /**
  * 品牌功能Controller
  * Created by macro on 2018/4/26.
+ * read 2018-12-31
  */
 @Controller
 @Api(tags = "PmsBrandController",description = "商品品牌管理")

@@ -22,8 +22,9 @@ public class SmsHomeBrandServiceImpl implements SmsHomeBrandService {
     @Override
     public int create(List<SmsHomeBrand> homeBrandList) {
         for (SmsHomeBrand smsHomeBrand : homeBrandList) {
-            smsHomeBrand.setRecommendStatus(1);
-            smsHomeBrand.setSort(0);
+            //todo 直接选择默认传递即可
+//            smsHomeBrand.setRecommendStatus(1);
+//            smsHomeBrand.setSort(0);
             homeBrandMapper.insert(smsHomeBrand);
         }
         return homeBrandList.size();
